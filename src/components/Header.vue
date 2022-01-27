@@ -74,7 +74,6 @@ export default {
           {
             display: flex;
             align-items: center;
-            list-style-type: none;
             padding: 0 8px;
             border: 1px solid #010101;
 
