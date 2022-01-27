@@ -6,20 +6,8 @@
       </div>
       <nav class="right_navigation">
         <ul>
-          <li class="nav_menu">
-            <a href="#">voce</a>
-          </li>
-          <li class="nav_menu">
-            <a href="#">voce</a>
-          </li>
-          <li class="nav_menu">
-            <a href="#">voce</a>
-          </li>
-          <li class="nav_menu">
-            <a href="#">voce</a>
-          </li>
-          <li class="nav_menu">
-            <a href="#">voce</a>
+          <li class="nav_menu" :class="{selected : elementi.current}" v-for="(elementi , indice) in links" :key="indice">
+            <a href="#" :class="{textSelected : elementi.current}">{{elementi.text}}</a>
           </li>
         </ul>
       </nav>
@@ -30,6 +18,32 @@
 <script>
 export default {
   name: 'Header',
+   data() {
+      return{
+        links: [
+            {
+                text: "Home",
+                url: "#",
+                current: false,
+            },
+            {
+                text: "Prodotti",
+                url: "#",
+                current: true,
+            },
+            {
+                text: "Chi Siamo",
+                url: "#",
+                current: false,
+            },
+            {
+                text: "Contatti",
+                url: "#",
+                current: false,
+            },
+        ]
+      }
+    }
 }
 </script>
 
@@ -46,7 +60,6 @@ export default {
       margin: 0 auto;
       width: $mainWidth;
       background-color: #fff;
-      border: 1px solid red;
         
         .logo_img
         {
@@ -75,16 +88,22 @@ export default {
             display: flex;
             align-items: center;
             padding: 0 8px;
-            border: 1px solid #010101;
 
             a
             {
               color: $baseColor;
               padding: 0 24px;
-              border: 1px solid #010101;
+            }
+            a.textSelected
+            {
+              color: blue;
             }
           }
         }
+      }
+      .selected
+      {
+            border-bottom: 4px solid blue;
       }
     }  
   }
