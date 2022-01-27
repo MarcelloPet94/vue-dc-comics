@@ -29,17 +29,20 @@
             </ul>  
         </div>    
     </div>
+    <Social/>
   </div>
 </template>
 
 <script>
 
 import Strip from  './Strip.vue'
+import Social from  './Social.vue'
 
 export default {
   name: 'Footer',
   components: {
-    Strip
+    Strip,
+    Social
   }
 }
 </script>
@@ -79,7 +82,7 @@ export default {
 
     .info_box
     {
-        padding: 24px 24px 24px 0;
+        padding: 48px 24px 48px 0;
     }
 }
 
