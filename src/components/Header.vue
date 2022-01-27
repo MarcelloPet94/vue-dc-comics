@@ -34,21 +34,17 @@ export default {
 </script>
 
 <style scoped lang="scss">
-/* GLOBAL STYLE */
-@import '../assets/partials/style.scss';
 /* IMPORT > VARIABLES */
 @import '../assets/partials/variables.scss';
 
   .header
   {
-    background-color: lightgrey;
-
     .align_content_header
     {
       display: flex;
       justify-content: space-between;
       margin: 0 auto;
-      width: 80%;
+      width: $mainWidth;
       background-color: #fff;
       border: 1px solid red;
         
@@ -84,7 +80,6 @@ export default {
 
             a
             {
-              text-decoration: none;
               color: $baseColor;
               padding: 0 24px;
               border: 1px solid #010101;
